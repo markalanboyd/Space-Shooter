@@ -5,8 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private float _speed = 10f;
-    [SerializeField]
     private GameObject _laserPrefab;
+    private float _fireRate = 0.15f;
+    private float _canFire = -1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         CalculateMovement();
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(_laserPrefab, transform.position, Quaternion.identity);
-        }
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire){
+            FireLaser();
+        } 
     }
 
     void CalculateMovement()
@@ -44,5 +43,11 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(11.3f, transform.position.y, 0);
         }
+    }
+
+    void FireLaser()
+    {
+        _canFire = Time.time + _fireRate;
+        Instantiate(_laserPrefab, transform.position, Quaternion.identity);
     }
 }
