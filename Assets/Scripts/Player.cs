@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float _speed = 10f;
-    private GameObject _laserPrefab;
+    private float _speed = 10.0f;
+    public GameObject laserPrefab;
     private float _fireRate = 0.15f;
     private float _canFire = -1.0f;
 
@@ -48,6 +48,6 @@ public class Player : MonoBehaviour
     void FireLaser()
     {
         _canFire = Time.time + _fireRate;
-        Instantiate(_laserPrefab, transform.position, Quaternion.identity);
+        Instantiate(laserPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
     }
 }
