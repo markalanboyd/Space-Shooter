@@ -233,7 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c03bcdca75e44f6b428827d8075001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 3779816977989865942, guid: e79531ba0943a4d04823d93cd4231c2a, type: 3}
+  _laserPrefab: {fileID: 3779816977989865942, guid: e79531ba0943a4d04823d93cd4231c2a, type: 3}
+  _speed: 10
+  _fireRate: 0.15
   _lives: 3
 --- !u!1 &948763303
 GameObject:
@@ -264,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb3c99750f6c4b10844ee28a82375e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3576692434267177907, guid: c27b2677508814f11925289181d6cc2c, type: 3}
+  _enemyPrefab: {fileID: 3576692434267177907, guid: c27b2677508814f11925289181d6cc2c, type: 3}
 --- !u!4 &948763305
 Transform:
   m_ObjectHideFlags: 0

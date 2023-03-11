@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject laserPrefab;
+    [SerializeField]
+    private GameObject _laserPrefab;
+    [SerializeField]
     private float _speed = 10.0f;
+    [SerializeField]
     private float _fireRate = 0.15f;
     private float _canFire = -1.0f;
     [SerializeField]
@@ -50,7 +53,7 @@ public class Player : MonoBehaviour
     void FireLaser()
     {
         _canFire = Time.time + _fireRate;
-        Instantiate(laserPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
+        Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
     }
 
     public void Damage()
