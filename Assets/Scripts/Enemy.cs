@@ -8,12 +8,6 @@ public class Enemy : MonoBehaviour
     private float _speed = 4.0f;
     public GameObject laserPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        transform.position = new Vector3(Random.Range(-7.0f, 7.0f), 7, 0);
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -36,7 +30,7 @@ public class Enemy : MonoBehaviour
         if (other.tag == "Player")
         {
             Player player = other.transform.GetComponent<Player>();
-            
+
             if (player != null)
             {
                 player.Damage();
