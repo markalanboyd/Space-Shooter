@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7324086602903851464}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3576692434267177907}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6210456df9224e72b6fcca45736412f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 4
+  laserPrefab: {fileID: 3779816977989865942, guid: e79531ba0943a4d04823d93cd4231c2a, type: 3}
 --- !u!54 &7324086602903851464
 Rigidbody:
   m_ObjectHideFlags: 0

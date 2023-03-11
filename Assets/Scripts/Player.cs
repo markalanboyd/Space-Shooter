@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float _speed = 10.0f;
     public GameObject laserPrefab;
+    private float _speed = 10.0f;
     private float _fireRate = 0.15f;
     private float _canFire = -1.0f;
 

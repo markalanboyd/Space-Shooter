@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 293959827}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,10 +419,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2321597181902180333, guid: c27b2677508814f11925289181d6cc2c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3576692434267177907, guid: c27b2677508814f11925289181d6cc2c, type: 3}
       propertyPath: m_Name
       value: Enemy
