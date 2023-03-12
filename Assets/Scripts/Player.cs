@@ -91,5 +91,15 @@ public class Player : MonoBehaviour
     public void TripleShotActivate()
     {
         _tripleShotActive = true;
+        StartCoroutine(TripleShotPowerDownRoutine());
+    }
+
+    IEnumerator TripleShotPowerDownRoutine()
+    {
+        while (_tripleShotActive)
+        {
+            yield return new WaitForSeconds(5);
+            _tripleShotActive = false;
+        }
     }
 }
