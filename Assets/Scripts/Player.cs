@@ -73,8 +73,6 @@ public class Player : MonoBehaviour
         {
             Instantiate(_laserPrefab, transform.position + new Vector3(0, 1.05f, 0), Quaternion.identity);
         }
-
-        
     }
 
     public void Damage()
@@ -96,7 +94,7 @@ public class Player : MonoBehaviour
 
     IEnumerator TripleShotPowerDownRoutine()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(5.0f);
         _tripleShotActive = false;
     }
 }
